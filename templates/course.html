@@ -1,0 +1,5 @@
+{% for course in courses %}
+<option value="{{course.id}}">{{course.name}}</option>
+{% endfor %}
+
+<select hx-get="course/" hx-target="#id_course"></select>

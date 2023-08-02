@@ -1,0 +1,10 @@
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Register Here</h3>
+        <!-- Add form fields using Django form rendering -->
+        {{ form.as_p }}
+
+        <button type="submit">Submit</button>
+    </form>
+</body>

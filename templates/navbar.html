@@ -1,0 +1,44 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toronto</title>
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <nav>
+    <div class="navbar-container">
+      <div class="logo">
+        <a href="/"><img src="{% static 'image/logo.png' %}" width="150px" ></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+       {% if user.is_authenticated %}
+          <!-- User is logged in, show Logout link -->
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+          <!-- User is not logged in, show Login and Register links -->
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'register' %}">Register</a></li>
+        {% endif %}
+    <div class="dropdown">
+      <div class="dropdown-btn">Department</div>
+          <div class="dropdown-content">
+             <a href="{% url 'engineer' %}">Engineering</a>
+             <a href="{% url 'medical' %}">Medical</a>
+             <a href="{% url 'law' %}">Law</a>
+             <a href="{% url 'commerce' %}">Commerce</a>
+              <a href="{% url 'hospitality' %}">Hospitality</a>
+          </div>
+
+    </div>
+          {% if user.is_authenticated %}
+          <li>Hello {{user.username}}</li>
+          {% endif %}
+      </ul>
+    </div>
+  </nav>
+</body>
+</html>

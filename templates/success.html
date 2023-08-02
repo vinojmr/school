@@ -1,0 +1,64 @@
+{% include 'navbar.html' %}
+<head>
+    <style>
+
+main{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+}
+.container {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(20px);
+  box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 32px;
+  position: absolute;
+  top: 180%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  backdrop-filter: blur(0px);
+  color: white;
+}
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+    <div class="thumb">
+    <h3>Thank you for registering! Your information has been submitted successfully.</h3>
+    <a href="{% url 'home' %}"><button class="btn btn-success" > Go to home page </button></a>
+    </div>
+        </div>
+
+    </main>
+</body>
+</html>

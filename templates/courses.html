@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/card.css' %}">
+</head>
+<body>
+<main>
+<h1>Courses</h1>
+    <div class="card-row">
+<div class="card">
+    <img src="{% static 'image/science.png' %}" alt="img1">
+    <h2>Engineering</h2>
+    <p>Science is MAGIC that works.</p>
+</div>
+
+<div class="card">
+    <img src="{% static 'image/law1.png' %}" alt="img2">
+    <h2>Law</h2>
+    <p>Injustice anywhere is a threat to justice everywhere.</p>
+</div>
+
+        <div class="card">
+    <img src="{% static 'image/medical.jpg' %}" alt="img2">
+    <h2>Medical</h2>
+    <p>You treat a disease, you win, you lose. You treat a person, I guarantee you, you'll win - no matter what the outcome</p>
+</div>
+
+        <div class="card">
+    <img src="{% static 'image/commerce1.jpg' %}" alt="img2">
+    <h2>Commerce</h2>
+    <p>Commerce changes the fate and genius of nations.</p>
+</div>
+
+
+
+        <div class="card">
+    <img src="{% static 'image/hosp.png' %}" alt="img3">
+    <h2>Hospitality</h2>
+    <p>Hospitality should have no other nature than love.
+    </p>
+</div>
+
+        </div>
+        <br>
+    <a href="{% url 'login' %}">Login</a>
+
+
+</main>
+</body>
+</html>
